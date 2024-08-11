@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Or Spanish?</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #1a1a1a, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+            color: #00ff99;
+            position: relative;
+        }
+
+        iframe {
+            border: 3px solid #00ff99;
+            box-shadow: 0px 0px 15px #00ff99;
+            animation: pulse 2s infinite;
+            width: 1200px;
+            height: 675px;
+            transform: translateY(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        iframe:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0px 0px 10px #00ff99;
+            }
+            50% {
+                box-shadow: 0px 0px 25px #00ff99;
+            }
+            100% {
+                box-shadow: 0px 0px 10px #00ff99;
+            }
+        }
+
+        .glow {
+            font-size: 24px;
+            animation: glow 1.5s infinite alternate;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99, 0 0 50px #00ff99, 0 0 60px #00ff99;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99, 0 0 50px #00ff99, 0 0 60px #00ff99, 0 0 70px #00ff99;
+            }
+        }
+
+        .bubble {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 255, 153, 0.2);
+            border-radius: 50%;
+            border: 2px solid #00ff99;
+            position: absolute;
+            cursor: pointer;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float1 {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-80px) translateX(80px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-100px) translateX(-50px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @keyframes float3 {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-120px) translateX(70px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @keyframes float4 {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-90px) translateX(-60px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @keyframes float5 {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-70px) translateX(90px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @keyframes float6 {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-110px) translateX(-80px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        #bubble1 { top: 0; left: 0; animation: float1 12s infinite; }
+        #bubble2 { top: 0; right: 0; animation: float2 14s infinite; }
+        #bubble3 { bottom: 0; left: 0; animation: float3 16s infinite; }
+        #bubble4 { bottom: 0; right: 0; animation: float4 18s infinite; }
+        #bubble5 { top: 25%; left: 75%; animation: float5 20s infinite; }
+        #bubble6 { bottom: 25%; right: 25%; animation: float6 22s infinite; }
+
+        .paper {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 150px;
+            background: #fff;
+            border: 1px solid #00ff99;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+            overflow: hidden;
+            text-align: center;
+            font-size: 16px;
+            color: #000;
+            transition: box-shadow 0.3s;
+        }
+
+        .paper:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 153, 0.8);
+        }
+
+        .paper-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .paper:hover .paper-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow">ᴊᴏɪɴ ᴅɪsᴄᴏʀᴅ.ɢɢ/ʀᴏʙʟᴏxᴛʀᴏʟʟᴇʀs ғᴏʀ ʟᴇᴀᴋᴇᴅ ᴄᴏɴғɪᴅᴇɴᴛɪᴀʟ ɢᴜɪᴅᴇs, ʀᴀɪᴅs, ᴇxᴘʟᴏɪᴛs, ᴀɴᴅ ᴍᴜᴄʜ ᴍᴏʀᴇ!!</div>
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSrY4rBpUTbSCF6LzC8OSN_GLZNRXvRQcYIpLSEARm7y-mqCbsgbrGiB31M8uO6GfBxjthjjlMCQTgg/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    
+    <div id="bubble1" class="bubble"></div>
+    <div id="bubble2" class="bubble"></div>
+    <div id="bubble3" class="bubble"></div>
+    <div id="bubble4" class="bubble"></div>
+    <div id="bubble5" class="bubble"></div>
+    <div id="bubble6" class="bubble"></div>
+    
+    <div class="paper">
+        <div class="paper-content">
+            Psst, here's a secret. Dont tell ANYONE <br>
+            <a href="https://bhleaks.lol/" target="_blank" style="color: #00ff99;">https://bhleaks.lol/</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
